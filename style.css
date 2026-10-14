@@ -1,0 +1,122 @@
+
+:root{
+  --brown: #3a2522;
+  --orange: #f4b18a;
+  --cream: #fff8e7;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+}
+img{ max-width: 100%; }
+
+
+header{
+  background: #fff8e7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav a{
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: bold;
+}
+nav a:hover{
+  color: var(--orange);
+}
+
+/* hero */
+.hero{
+  background: #4b2e2a;
+  color:#fff8e7;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero a{
+  background: var(--orange);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* why choose us cards */
+.cards{
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+}
+.card{
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+}
+.card:hover{
+  box-shadow: 0 0 10px gray;
+}
+
+/* table */
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  border: 1px solid black;
+  padding: 8px;
+}
+thead{
+  background: var(--brown);
+  color: rgb(5, 5, 5);
+}
+tr:nth-child(even){
+  background: #f2f2f2;
+}
+
+/* gallery */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* form */
+input, select, textarea{
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+input:focus{
+  border-color: var(--orange);
+}
+
+footer{
+  background: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* responsive */
+@media (max-width: 1024px){
+  .cards{ flex-wrap: wrap; }
+  .card{ width: 45%; }
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px){
+  nav ul{ flex-direction: column; }
+  .cards{ flex-direction: column; }
+  .gallery{ grid-template-columns: 1fr; }
+  header{ flex-direction: column; }
+}
